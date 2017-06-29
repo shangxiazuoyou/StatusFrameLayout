@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ghizzoniandrea.statusframelayout.MainActivity">
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_show_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="loading" />
+
+        <Button
+            android:id="@+id/btn_show_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="content" />
+
+        <Button
+            android:id="@+id/btn_show_error"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="error" />
+
+        <Button
+            android:id="@+id/btn_show_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="empty" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_show_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="custom" />
+
+
+    <com.ghizzoniandrea.statusframelayout.lib.StatusFrameLayout
+        android:id="@+id/status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        app:sflAnimationEnabled="true"
+        app:sflInAnimation="@anim/alpha_in"
+        app:sflOutAnimation="@anim/alpha_out">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content" />
+
+    </com.ghizzoniandrea.statusframelayout.lib.StatusFrameLayout>
+
+</LinearLayout>

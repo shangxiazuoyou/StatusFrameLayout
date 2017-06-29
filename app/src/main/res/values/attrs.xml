@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="sflStatusFrameLayout">
+        <attr name="sflAnimationEnabled" format="boolean" />
+        <attr name="sflInAnimation" format="reference" />
+        <attr name="sflOutAnimation" format="reference" />
+    </declare-styleable>
+</resources>

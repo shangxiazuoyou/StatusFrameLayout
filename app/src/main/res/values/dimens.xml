@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="sflProgressSize">60dp</dimen>
+    <dimen name="sflImageSize">80dp</dimen>
+</resources>
